@@ -774,6 +774,7 @@ static void kdamond_reset_aggregated(struct damon_ctx *c)
 			trace_damon_aggregated(t, ti, r, damon_nr_regions(t));
 			r->last_nr_accesses = r->nr_accesses;
 			r->nr_accesses = 0;
+			r->checkcnt = 0;
 		}
 		ti++;
 	}

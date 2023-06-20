@@ -55,6 +55,7 @@ struct damon_region {
 	struct list_head list;
 
 	unsigned int age;
+	unsigned long checkcnt;
 /* private: Internal value for age calculation. */
 	unsigned int last_nr_accesses;
 };

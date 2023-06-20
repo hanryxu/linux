@@ -557,6 +557,7 @@ static void __damon_va_check_access(struct mm_struct *mm,
 	}
 
 	last_accessed = damon_va_young(mm, r->sampling_addr, &last_folio_sz);
+	r->checkcnt++;
 	if (last_accessed)
 		r->nr_accesses++;
 
